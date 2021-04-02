@@ -1,11 +1,11 @@
 'use strict';
-// const { response, request } = require('express');
+
 let express = require('express');
 
 let server = express();
 let PORT = process.env.PORT || 3030 ;
 
-server.use(express.static('/.public'));
+server.use(express.static('./public'));
 
 server.get('/', (req,res)=>{
     res.send('home route')
